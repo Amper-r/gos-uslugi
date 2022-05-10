@@ -1,0 +1,193 @@
+@import "./normilize.scss";
+
+.header-fixed{
+    position: fixed;
+    background-color: #fff;
+    border: 1px solid #999;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    padding: 5px;
+}
+
+.hidden{
+    display: none !important; 
+}
+
+.select_has_electronic_view{
+    font-size: 14px;
+    padding: 5px 10px;
+    outline: none;
+    cursor: pointer;
+
+    position: absolute;
+    right: 3vw;
+    top: 0;
+}
+
+.wraper-page{
+    position: relative;
+    min-height: 200px;
+    margin-top: 30px;
+
+    &.loading::after{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 200px;
+        background-image: url("../img/load.gif");
+        background-position: center;
+        background-size: 50px 50px;
+        background-repeat: no-repeat;
+    }
+}
+.page-item-link{
+    display: block;
+    font-size: 14px;
+    padding: 16px;
+    border-radius: 5px;
+    border: 2px solid rgb(190, 190, 190);
+    background-color: rgb(233, 233, 233);
+    color: #222;
+}
+.page-item{
+    margin-bottom: 20px;
+}
+.pages{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+
+    .page-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        background-color: rgb(237, 237, 237);
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:not(:last-child){
+            margin-right: 10px;
+        }
+        &.active{
+            background-color: rgb(42, 42, 196);
+            color: #fff;
+            cursor: default;
+        }
+    }
+}
+.wraper-pages{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 25px;
+}
+.content-pages-btns{
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+}
+.btn-nav-page{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.btn-nav-page-prev{
+    background-image: url("../img/chevron-left.svg");
+    margin-right: 25px;
+}
+.btn-nav-page-next{
+    background-image: url("../img/chevron-right.svg");
+    margin-left: 25px;
+}
+
+.wraper-form{
+    padding-top: 5px;
+}
+.form-load{
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .resurs-input{
+        font-size: 14px;
+        padding: 12px 20px;
+        outline: none;
+
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .btn-send{
+        color: #fff;
+        outline: none;
+        border: none;
+
+        font-size: 16px;
+        background-color: rgb(42, 42, 196);
+        border-radius: 4px;
+
+        padding: 10px 20px;
+        margin-top: 12px;
+        cursor: pointer;
+    }
+}
+
+.wraper-error-list{
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.title-error-list{
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 24px;
+}
+.content-error-list{
+    overflow: hidden;
+    border-radius: 5px;
+
+    .item-error-list{
+        padding: 10px;
+
+        &:nth-child(odd){
+            background-color: rgb(240, 240, 240);
+        }
+        &:nth-child(even){
+            background-color: rgb(229, 229, 229);
+        }
+    }
+    .prop-error-list{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+
+    }
+    .name_prop-error-list{
+        font-weight: 500;
+        color: rgb(42, 42, 196);
+    }
+    .errors-not-found{
+        font-weight: 700;
+        font-size: 20px;
+        color: #999;
+    }
+}

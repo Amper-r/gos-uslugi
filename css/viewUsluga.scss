@@ -1,0 +1,43 @@
+@import "./normilize.scss";
+
+.content{
+    max-width: 1450px;
+    padding: 0 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.id{
+    display: inline-block;
+    background-color: rgb(42, 42, 196);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+.name{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.section{
+    max-width: 800px;
+
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgb(232, 232, 232);
+    border-radius: 5px;
+}
+.title{
+    display: block;
+    font-weight: 500;
+}
+.value{
+    display: block;
+    margin-top: 10px;
+}
+
+.btn-back{
+    display: block;
+    margin-bottom: 16px;
+}
