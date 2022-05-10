@@ -56,12 +56,60 @@ button, input {
 
 .header-fixed {
   position: fixed;
+  bottom: 25px;
+  left: 0;
+  z-index: 10;
   background-color: #fff;
   border: 1px solid #999;
-  left: 0;
-  top: 0;
-  z-index: 10;
   padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateX(calc(-100% + 22px + 10px));
+          transform: translateX(calc(-100% + 22px + 10px));
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header-fixed .wraper-btn-header-fixed {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  width: 22px;
+  height: 22px;
+  padding-left: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.header-fixed .btn-header-fixed {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/chevron-right.svg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header-fixed.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.header-fixed.active .btn-header-fixed {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.wraper-header {
+  width: 100%;
 }
 
 .hidden {
@@ -73,9 +121,6 @@ button, input {
   padding: 5px 10px;
   outline: none;
   cursor: pointer;
-  position: absolute;
-  right: 3vw;
-  top: 0;
 }
 
 .wraper-page {
@@ -165,7 +210,7 @@ button, input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .content-pages-btns {
@@ -195,6 +240,10 @@ button, input {
 
 .wraper-form {
   padding-top: 5px;
+  padding-right: 10px;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
 }
 
 .form-load {
@@ -202,9 +251,6 @@ button, input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -214,12 +260,38 @@ button, input {
           flex-direction: column;
 }
 
+.form-load .form-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .form-load .resurs-input {
+  display: block;
   font-size: 14px;
   padding: 12px 20px;
   outline: none;
   width: 100%;
   max-width: 500px;
+}
+
+.form-load .btn-and-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 10px;
 }
 
 .form-load .btn-send {
@@ -230,7 +302,7 @@ button, input {
   background-color: #2a2ac4;
   border-radius: 4px;
   padding: 10px 20px;
-  margin-top: 12px;
+  margin-bottom: 5px;
   cursor: pointer;
 }
 
@@ -284,4 +356,16 @@ button, input {
   font-weight: 700;
   font-size: 20px;
   color: #999;
+}
+
+@media (max-width: 680px) {
+  .form-load .btn-send {
+    margin-top: 10px;
+  }
+  .form-load .form-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
